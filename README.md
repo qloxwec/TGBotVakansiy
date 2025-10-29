@@ -28,7 +28,7 @@ from telebot import types
 import csv
 import uuid
 import os
-from prettytable import PrettyTable  # 👈 библиотека для красивых таблиц
+from prettytable import PrettyTable  
 
 TOKEN = "OUR_TOKEN"   #Его тут нет ибо мало ли кто в бота залезет
 bot = telebot.TeleBot(TOKEN)
@@ -41,7 +41,7 @@ if not os.path.exists("answers.csv"):
         writer = csv.writer(f)
         writer.writerow(["user_id", "Имя", "Вопрос", "Ответ"])
 
-# --- БАЗА ВАКАНСИЙ (та же, как в предыдущем коде) ---
+# --- БАЗА ВАКАНСИЙ ---
 VACANCIES = {
     "IT": [
         {"title": "Стажёр Python-разработчик", "company": "Skillbox", "salary": "40 000–55 000", "format": "Удаленно",
